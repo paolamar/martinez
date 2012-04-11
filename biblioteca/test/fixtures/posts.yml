@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  titulo: MyString
+  autores: MyString
+  fecha_de_publicacion: 2012-04-10
+  numero_de_edicion: MyString
+  editorial: MyString
+  pais_de_publicacion: MyString
+  idioma_de_edicion: MyString
+  numero_de_tomo: MyString
+  portada: MyString
+  contraportada: MyString
+  numero_de_paginas: MyString
+  fecha_entrada_biblioteca: 2012-04-10
+  estado_de_entrada: MyString
+  forma_de_adquisicion: MyString
+  codigo_interno: MyString
+  ISBN: MyString
+  descripcion_del_libro: MyText
+
+two:
+  titulo: MyString
+  autores: MyString
+  fecha_de_publicacion: 2012-04-10
+  numero_de_edicion: MyString
+  editorial: MyString
+  pais_de_publicacion: MyString
+  idioma_de_edicion: MyString
+  numero_de_tomo: MyString
+  portada: MyString
+  contraportada: MyString
+  numero_de_paginas: MyString
+  fecha_entrada_biblioteca: 2012-04-10
+  estado_de_entrada: MyString
+  forma_de_adquisicion: MyString
+  codigo_interno: MyString
+  ISBN: MyString
+  descripcion_del_libro: MyText

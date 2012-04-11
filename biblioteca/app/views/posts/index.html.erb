@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style type="text/css">
+    body { background-color: #E6E6FA; color: #666; font-family:  sans-serif; }
+   
+    h1 {color:#000000; }
+    th {  border:solid 1px #1A1A1A; margin: 20em; color:#D8155F; position:relative;font-size:4mm;}
+  </style>
+<h1>Lista de Registrados</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Autores</th>
+    <th>Fecha de publicacion</th>
+    <th>Numero de edicion</th>
+    <th>Editorial</th>
+    <th>Pais de publicacion</th>
+    <th>Idioma de edicion</th>
+    <th>Numero de tomo</th>
+    <th>Portada</th>
+    <th>Contraportada</th>
+    <th>Numero de paginas</th>
+    <th>Fecha entrada biblioteca</th>
+    <th>Estado de entrada</th>
+    <th>Forma de adquisicion</th>
+    <th>Codigo interno</th>
+    <th>Isbn</th>
+    <th>Descripcion del libro</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= post.titulo %></td>
+    <td><%= post.autores %></td>
+    <td><%= post.fecha_de_publicacion %></td>
+    <td><%= post.numero_de_edicion %></td>
+    <td><%= post.editorial %></td>
+    <td><%= post.pais_de_publicacion %></td>
+    <td><%= post.idioma_de_edicion %></td>
+    <td><%= post.numero_de_tomo %></td>
+    <td><%= post.portada %></td>
+    <td><%= post.contraportada %></td>
+    <td><%= post.numero_de_paginas %></td>
+    <td><%= post.fecha_entrada_biblioteca %></td>
+    <td><%= post.estado_de_entrada %></td>
+    <td><%= post.forma_de_adquisicion %></td>
+    <td><%= post.codigo_interno %></td>
+    <td><%= post.ISBN %></td>
+    <td><%= post.descripcion_del_libro %></td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'NUEVO REGISTRO', new_post_path %>
+</body>
+</html>

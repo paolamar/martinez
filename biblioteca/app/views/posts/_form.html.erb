@@ -1,0 +1,85 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> No puedes Guardar este Post:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :autores %><br />
+    <%= f.text_field :autores %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_de_publicacion %><br />
+    <%= f.date_select :fecha_de_publicacion %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_de_edicion %><br />
+    <%= f.text_field :numero_de_edicion %>
+  </div>
+  <div class="field">
+    <%= f.label :editorial %><br />
+    <%= f.text_field :editorial %>
+  </div>
+  <div class="field">
+    <%= f.label :pais_de_publicacion %><br />
+    <%= f.text_field :pais_de_publicacion %>
+  </div>
+  <div class="field">
+    <%= f.label :idioma_de_edicion %><br />
+    <%= f.text_field :idioma_de_edicion %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_de_tomo %><br />
+    <%= f.text_field :numero_de_tomo %>
+  </div>
+  <div class="field">
+    <%= f.label :portada %><br />
+    <%= f.text_field :portada %>
+  </div>
+  <div class="field">
+    <%= f.label :contraportada %><br />
+    <%= f.text_field :contraportada %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_de_paginas %><br />
+    <%= f.text_field :numero_de_paginas %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_entrada_biblioteca %><br />
+    <%= f.date_select :fecha_entrada_biblioteca %>
+  </div>
+  <div class="field">
+    <%= f.label :estado_de_entrada %><br />
+    <%= f.text_field :estado_de_entrada %>
+  </div>
+  <div class="field">
+    <%= f.label :forma_de_adquisicion %><br />
+    <%= f.text_field :forma_de_adquisicion %>
+  </div>
+  <div class="field">
+    <%= f.label :codigo_interno %><br />
+    <%= f.text_field :codigo_interno %>
+  </div>
+  <div class="field">
+    <%= f.label :ISBN %><br />
+    <%= f.text_field :ISBN %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion_del_libro %><br />
+    <%= f.text_area :descripcion_del_libro %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
